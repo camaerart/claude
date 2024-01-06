@@ -51,7 +51,7 @@ function CarouselCard({ imageUrl, content }: Props) {
         <section className="relative">
           
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-            <h1 className="text-4xl font-bold uppercase text-black ">Example for Claude</h1>
+            <h1 className="text-4xl font-bold uppercase hover:text-black shadow-xl text-violet-500  ease-in-out duration-150 ">Example for Claue</h1>
             <h2 className="text-2xl font-semibold mt-2">Flash Sale</h2>
             <Button className="mt-4">Shop Now</Button>
           </div>

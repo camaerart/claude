@@ -17,7 +17,7 @@ const Navbar = () => {
             className="cursor-pointer hover:animate-slowspin"
           />
           <span className="font-bold ml-2 hidden md:block text-gray-500 hover:text-pretty hover:text-pink-400 ease-in-out duration-300">
-            Claude
+            Claue
           </span>
         </a>
 
