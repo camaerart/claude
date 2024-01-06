@@ -16,7 +16,7 @@ const Navbar = () => {
             height={70}
             className="cursor-pointer hover:animate-slowspin"
           />
-          <span className="font-bold ml-2 hidden md:block text-white hover:text-pretty hover:text-pink-400 ease-in-out duration-300">
+          <span className="font-bold ml-2 hidden md:block text-gray-500 hover:text-pretty hover:text-pink-400 ease-in-out duration-300">
             Claude
           </span>
         </a>
@@ -24,19 +24,19 @@ const Navbar = () => {
          <div className="w-[600px] h-full flex flex-row items-center justify-between ml-6 ">
           <div className="hidden md:flex items-center justify-between w-full h-auto border border-[white] hover:border-[pink] bg-[gray-200] mr-3 md:mr-[13px] px-2 md:px-[20px] py-1 md:py-[10px] rounded-xl text-black hover:text-pink-600 ease-in-out duration-300 space-x-2">
   <a href="#" className="cursor-pointer">
-    Demo
+    General Shop
   </a>
   <a href="#" className="cursor-pointer">
-    Shop
+    Promos
   </a>
   <a href="#" className="cursor-pointer">
-    Product
+    CX
     </a>
      <a href="#" className="cursor-pointer">
-    Sale
+    Promos💓
     </a>
     <a href="#" className="cursor-pointer">
-    Portfolio
+    Fast delivery🍧
     </a>
 </div>
           {/* Íconos en dispositivos móviles */}

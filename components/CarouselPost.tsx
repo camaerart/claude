@@ -1,22 +1,26 @@
+"use client"
+
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Button } from './ui/button';
 import Carouselcard from './CarouselCard';
+import dynamic from 'next/dynamic';
 interface Props {
   imageUrl: string;
   content: string; 
 }
 
-export default function CarouselPost() {
+export default function CarouselPosting() {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
       items: 5
     },
     desktop: {
-      breakpoint: { max: 1024, min: 800 },
-      items: 3
+      breakpoint: { max: 3000,
+        min: 1024 },
+      items: 2
     },
     tablet: {
       breakpoint: { max: 800, min: 464 },
@@ -31,49 +35,23 @@ export default function CarouselPost() {
   const CarouselcardData = [
     {
       id: 1,
-      imageurl: "/girl1.jpg",
+      imageurl: "/image1.jpg",
       content: "girl"
 
     },
 
-    {
-      id: 2,
-      imageurl: "/girl2.jpg",
-      content: "girl2"
 
-    },
-    {
-      id: 3,
-      imageurl: "/girl3.jpg",
-      content: "girl3"
 
-    },
-
-    {
-      id: 6,
-      imageurl: "/girl3.jpg",
-      content: "G"
-
-    },
-    {
-      id: 6,
-      imageurl: "/girl3.jpg",
-      content: "G"
-
-    },
-    {
-      id: 7,
-      imageurl: "/green2.jpg",
-      content: "G"
-
-    },
 
   ]
   interface Props {
   imageUrl: string;
     title: string;
 
-}
+  }
+  const Carousel = dynamic(() => import('react-multi-carousel'), {
+  ssr: false, 
+});
 
 const customButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
   const { carouselState: { currentSlide } } = rest;
@@ -89,10 +67,12 @@ const customButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
     <div>
       <Carousel
         responsive={responsive}
-        centerMode={true}
+        centerMode={false}
         autoPlay={true}
         autoPlaySpeed={5000}
         infinite={true}
+        containerClass="container"
+        
 
         renderButtonGroupOutside={true}
         showDots={true}
@@ -100,10 +80,10 @@ const customButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
         
 
         beforeChange={(nextSlide, { currentSlide }) => {
-          // do something before slide changes
+
         }}
         afterChange={(previousSlide, { currentSlide }) => {
-          // do something after slide changes
+
         }}
       >
         {CarouselcardData.map(item => (
